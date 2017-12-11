@@ -1,0 +1,21 @@
+<div class="col-sm-12" id="articles">
+    {{#if articles}}
+        {{#each articles}}
+            <div class="card">
+                <div class="card-header">
+                    <h4><a class="article-link" target="_blank" href={{this.link}}>{{this.title}}</h4>
+                    <a id="btn-comments" class="btn btn-success save" data-id={{this._id}}>Comments</a>
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title"> {{this.body}}</h4>
+                </div>
+            </div>
+        {{/each}}
+    {{else}}
+        <div class="card">
+            <div class="card-body">
+            <h4>No articles today, sorry!</h4>
+            </div>
+         </div>
+    {{/if}}
+</div>
